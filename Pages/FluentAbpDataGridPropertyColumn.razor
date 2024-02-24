@@ -1,0 +1,12 @@
+@typeparam TGridItem
+@typeparam TProp
+@using System.Linq.Expressions
+@using Microsoft.FluentUI.AspNetCore.Components
+
+<PropertyColumn TGridItem="TGridItem" TProp="TProp" Property="Property"/>
+
+
+@code {
+    [Parameter, EditorRequired] public Expression<Func<TGridItem, TProp>> Property { get; set; }
+
+}

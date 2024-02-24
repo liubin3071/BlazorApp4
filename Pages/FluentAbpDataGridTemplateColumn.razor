@@ -1,0 +1,9 @@
+@typeparam TGridItem
+@using Microsoft.FluentUI.AspNetCore.Components
+<TemplateColumn TGridItem="TGridItem" ChildContent="@ChildContent" Title="@Title"/>
+
+
+@code {
+    [Parameter] public string Title { get; set; }
+    [Parameter] public RenderFragment<TGridItem> ChildContent { get; set; }
+}
